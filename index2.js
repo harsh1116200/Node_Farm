@@ -55,7 +55,7 @@ const server = http.createServer((req, res) => {
     res.end('<h1>Page Not Found!</h1>');
   }
 });
-
-server.listen(8000, '0.0.0.0', () => {
-  console.log('Listening to the reqest at the port 8000 ');
+const PORT=process.env.PORT || 3000;
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`Listening to the reqest at the port ${PORT}`);
 });
